@@ -21,17 +21,19 @@ Strengthen problem-solving using low-level programming
 
 🚀 Features
 
-✅ Capitalizes the first letter of each sentence
+Automatic sentence capitalization
 
-✅ Fixes standalone lowercase "i" → "I"
+Corrects standalone "i" → "I"
 
-✅ Removes extra spaces between words
+Removes duplicate spaces
 
-✅ Fixes spacing around punctuation
+Fixes punctuation spacing
 
-✅ Ensures the text ends with proper punctuation
+Ensures the essay ends with proper punctuation
 
-✅ Clean and readable terminal output
+Displays the total word count
+
+Provides clean terminal output
 
 🛠 Technologies Used
 
