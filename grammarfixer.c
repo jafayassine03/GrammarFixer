@@ -64,7 +64,6 @@ void fixGrammar(char text[]) {
         }
     }
 
-    
     int len = strlen(text);
     if (len > 0 &&
         text[len - 1] != '.' &&
@@ -74,6 +73,22 @@ void fixGrammar(char text[]) {
         text[len] = '.';
         text[len + 1] = '\0';
     }
+}
+
+int countWords(char text[]) {
+    int words = 0;
+    int inWord = 0;
+
+    for (int i = 0; text[i] != '\0'; i++) {
+        if (isspace(text[i])) {
+            inWord = 0;
+        } else if (!inWord) {
+            inWord = 1;
+            words++;
+        }
+    }
+
+    return words;
 }
 
 int main() {
@@ -87,6 +102,9 @@ int main() {
     fixGrammar(text);
 
     printf("\nCorrected Essay:\n%s\n", text);
+
+    int wordCount = countWords(text);
+    printf("\nWord Count: %d\n", wordCount);
 
     return 0;
 }
